@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "ac01f546-b8f9-43e7-abeb-eeea9bf0b739",
+		"name": "gestao-pessoas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "gabriellaroccagg@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "usr_name",
+									"value": "Gabriel Larocca",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/web/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "gabriellaroccagg@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/web/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fun_nome",
+									"value": "Roberto Carlos",
+									"type": "default"
+								},
+								{
+									"key": "fun_email",
+									"value": "robertocarlos@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "fun_telefone",
+									"value": "(11) 999999999",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/web/funcionario/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"funcionario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/web/funcionario/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fun_nome",
+									"value": "Bob Marley",
+									"type": "text"
+								},
+								{
+									"key": "fun_telefone",
+									"value": "(42) 99999999",
+									"type": "text"
+								},
+								{
+									"key": "fun_email",
+									"value": "bobmarley@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/web/funcionario/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/web/funcionario/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filter",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/web/funcionario/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"web",
+								"funcionario",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
